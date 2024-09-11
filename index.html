@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .section1 {
+            width: 70%;
+            height: 12rem;
+             background: #c31432; 
+background: -webkit-linear-gradient(to right, #240b36, #c31432);
+background: linear-gradient(to right, #240b36, #c31432); 
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 5px;
+            box-shadow:
+                0.6px 1.3px 1.4px rgba(0, 0, 0, 0.014),
+                1.5px 3.2px 3.5px rgba(0, 0, 0, 0.02),
+                2.9px 6px 6.5px rgba(0, 0, 0, 0.025),
+                5.1px 10.7px 11.6px rgba(0, 0, 0, 0.03),
+                9.6px 20.1px 21.7px rgba(0, 0, 0, 0.036),
+                23px 48px 52px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-img-section {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-data {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profile-img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+        }
+
+        .section2 {
+            width: 70%;
+            height: 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .section3 {
+            width: 70%;
+            height: 23rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .section4 {
+            width: 70%;
+            height: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .section-title {
+            font-weight: bold;
+        }
+
+        .ed-table {
+            width: 100%;
+            border: 2px solid gray;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color:#6e2c37;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            border: 1px solid gray;
+        }
+
+        .companies {
+            font-weight: bold;
+
+        }
+
+        .color-primary {
+            color: #8a6f20;
+        }
+
+        .section5 {
+            width: 70%;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .section6 {
+            width: 70%;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            font-weight: bold;
+            background: #c31432; 
+background: -webkit-linear-gradient(to right, #240b36, #c31432); 
+background: linear-gradient(to right, #240b36, #c31432); 
+        }
+
+        li {
+            list-style: square;
+            margin-left: 2rem;
+        }
+
+        .text-white {
+            color: white;
+        }
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="section1">
+        <div class="profile-img-section">
+            <img src="C:\Users\RajasriSneha\OneDrive\Desktop\butterfly.jpeg"
+                alt="doggo" class="profile-img">
+        </div>
+        <div class="profile-data">
+            <h1>
+                S.C.Rajasri Sneha
+            </h1>
+            <h3>
+                scrajasrisneha@gmail.com
+            </h3>
+        </div>
+    </div>
+    <div class="section2">
+        <h1 class="section-title color-primary">
+            About Me
+        </h1>
+        <p>
+            Currently pursuing a degree in SIET college
+            <br>
+            I have choosen my domain as Artificial Intelligence and Data Science
+            <br>
+            Myself engaged on performing various tasks and try to learn and implement new things
+        </p>
+    </div>
+    <div class="section3">
+        <h1 class="section-title color-primary">
+            Education
+        </h1>
+        <table class="ed-table">
+            <tr>
+                <th>Degree</th>
+                <th>Campus</th>
+                <th>Score %</th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>Vidya Vikasini Matric Higher Secondary School</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td>Vidya Vikasini Matric Higher Secondary School</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>3rd yr</td>
+                <td>Sri Shakthi Institute Of Engineering And Technology</td>
+                <td>91%</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section4">
+        <h1 class="section-title color-primary">
+            Projects
+        </h1>
+        <p>
+            <span class="companies"> 1. Contact Location Tracking System</span> <br>
+        <br>
+            <span class="companies">2.Insights Unveiling:A Visual Exploration Of Data Visualisation </span>
+        </p>
+    </div>
+    <div class="section5">
+        <h1 class="section-title color-primary">
+            Skills
+        </h1>
+        <ul>
+            <li>C</li>
+            <li>Python</li>
+            <li>MERN</li>
+            <li>PowerBi</li>
+            <li>SQL</li>
+            <li>Machine learning</li>
+            <li>Deep learning</li>
+        </ul>
+    </div>
+
+    <div class="section6">
+        <a href="tel:+91 9786559770">
+            <i class="fa-solid fa-phone text-white"></i>
+        </a>
+        <a href="mailto:scrajasrisneha@gmail.com">
+            <i class="fa-solid fa-envelope text-white"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+            <i class="fa-brands fa-linkedin-in text-white"></i>
+        </a>
+    </div>
+<div class="rating">
+  <input type="radio" id="star-1" name="star-radio" value="star-1">
+  <label for="star-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+  </label>
+  <input type="radio" id="star-2" name="star-radio" value="star-1">
+  <label for="star-2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+  </label>
+  <input type="radio" id="star-3" name="star-radio" value="star-1">
+  <label for="star-3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+  </label>
+  <input type="radio" id="star-4" name="star-radio" value="star-1">
+  <label for="star-4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+  </label>
+  <input type="radio" id="star-5" name="star-radio" value="star-1">
+  <label for="star-5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+  </label>
+</div>
+</div>
+</body>
+
+</html>
